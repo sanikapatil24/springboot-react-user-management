@@ -1,70 +1,152 @@
-# Getting Started with Create React App
+# User Management System
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+A full-stack User Management System built using **Spring Boot**, **React.js**, **MySQL**, and **REST APIs**. The application provides complete CRUD (Create, Read, Update, Delete) functionality for managing user records through a responsive and user-friendly interface.
 
-## Available Scripts
+## Features
 
-In the project directory, you can run:
+* Add new users
+* View all users
+* Update existing user details
+* Delete users
+* Responsive user interface
+* RESTful API integration
+* MySQL database connectivity
+* Exception handling and validation
 
-### `npm start`
+## Tech Stack
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+### Frontend
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+* React.js
+* React Router
+* Axios
+* Bootstrap
 
-### `npm test`
+### Backend
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+* Spring Boot
+* Spring Data JPA
+* Hibernate
+* REST API
 
-### `npm run build`
+### Database
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+* MySQL
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+### Tools & Technologies
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+* Java 17+
+* Maven
+* Git & GitHub
+* VS Code
+* Postman
 
-### `npm run eject`
+## Project Architecture
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+User Interface (React)
+↓
+REST API (Spring Boot)
+↓
+Service Layer
+↓
+Repository Layer (JPA)
+↓
+MySQL Database
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## API Endpoints
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+| Method | Endpoint   | Description         |
+| ------ | ---------- | ------------------- |
+| GET    | /users     | Get all users       |
+| GET    | /user/{id} | Get user by ID      |
+| POST   | /user      | Add a new user      |
+| PUT    | /user/{id} | Update user details |
+| DELETE | /user/{id} | Delete user         |
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+## Installation & Setup
 
-## Learn More
+### Clone Repository
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+```bash
+git clone https://github.com/sanikapatil24/springboot-react-user-management.git
+```
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+### Backend Setup
 
-### Code Splitting
+1. Open the Spring Boot project.
+2. Configure MySQL database in `application.properties`.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+```properties
+spring.datasource.url=jdbc:mysql://localhost:3306/userdb
+spring.datasource.username=root
+spring.datasource.password=your_password
 
-### Analyzing the Bundle Size
+spring.jpa.hibernate.ddl-auto=update
+```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+3. Run the Spring Boot application.
 
-### Making a Progressive Web App
+### Frontend Setup
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+```bash
+cd user-frontend
+npm install
+npm start
+```
 
-### Advanced Configuration
+The application will start at:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+```text
+http://localhost:3000
+```
 
-### Deployment
+Backend API:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+```text
+http://localhost:8080
+```
 
-### `npm run build` fails to minify
+## Screenshots
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+### Home Page
+<img width="958" height="482" alt="image" src="https://github.com/user-attachments/assets/9fb32e4d-ab85-4bab-a6ea-5483bb8a2d69" />
+
+### Add User
+
+<img width="958" height="482" alt="image" src="https://github.com/user-attachments/assets/c3783457-4d1f-4920-8929-0dfe1170a699" />
+
+
+### User List
+
+<img width="960" height="481" alt="image" src="https://github.com/user-attachments/assets/4e10d35b-3e78-4f74-9c75-79fd3b9f88d8" />
+
+
+## Future Enhancements
+
+* User Authentication & Authorization
+* JWT Security
+* Search and Filter Functionality
+* Pagination
+* Role-Based Access Control
+* Docker Deployment
+* Cloud Deployment (AWS)
+
+## Learning Outcomes
+
+Through this project, I gained hands-on experience with:
+
+* Building REST APIs using Spring Boot
+* React Component Development
+* State Management in React
+* Database Integration with MySQL
+* CRUD Operations
+* Git and GitHub Version Control
+* Full Stack Application Development
+
+## Author
+
+**Sanika Patil**
+
+Software Engineering Student | Java Full Stack Developer
+
+GitHub: https://github.com/sanikapatil24
